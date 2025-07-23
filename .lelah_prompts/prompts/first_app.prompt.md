@@ -1,0 +1,2 @@
+create a simple app that is gonna take in data and create data visualizations from it.
+modern UI, responsive design, and user-friendly interface. Deploy using vercel. Use simple data base solutions like local SQL without using an API
