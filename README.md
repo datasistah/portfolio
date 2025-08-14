@@ -136,10 +136,6 @@ This portfolio can be easily deployed to various platforms:
 - LinkedIn: [linkedin.com/in/lelahmckoy](https://linkedin.com/in/lelahmckoy)
 - GitHub: [github.com/lelahmckoy](https://github.com/lelahmckoy)
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
 ---
 
 ⭐ If you like this portfolio, please give it a star on GitHub!
