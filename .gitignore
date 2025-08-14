@@ -1,3 +1,6 @@
+# Exclude prompt directories
+.lelah_prompts/
+
 # Dependencies
 node_modules/
 npm-debug.log*

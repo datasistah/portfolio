@@ -89,6 +89,31 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
+    
+    // Background points sequential animation
+    const backgroundPoints = document.querySelectorAll('.background-points li');
+    const backgroundSection = document.querySelector('.about-background');
+    
+    if (backgroundSection) {
+        const backgroundObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    // Animate background points sequentially
+                    backgroundPoints.forEach((point, index) => {
+                        setTimeout(() => {
+                            point.classList.add('animate-in');
+                        }, index * 200); // 200ms delay between each point
+                    });
+                    backgroundObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.3,
+            rootMargin: '0px 0px -100px 0px'
+        });
+        
+        backgroundObserver.observe(backgroundSection);
+    }
 });
 
 // Typing effect for hero title
