@@ -3,111 +3,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Le'lah Mckoy - Portfolio</title>
-    <link rel="stylesheet" href="styles.css?v=2025072804">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Le'lah Mckoy - Data Analyst & Business Intelligence Professional. Expert in Python, Tableau, SQL, and data visualization. View my portfolio and projects.">
+    <meta name="keywords" content="data analyst, business intelligence, python, tableau, sql, data visualization, portfolio">
+    <meta name="author" content="Le'lah Mckoy">
+    <meta property="og:title" content="Le'lah Mckoy - Data Analyst Portfolio">
+    <meta property="og:description" content="Professional data analyst specializing in business intelligence and data visualization">
+    <meta property="og:type" content="website">
+    <title>Le'lah Mckoy - Data Analyst & Business Intelligence Professional</title>
+    <link rel="stylesheet" href="styles.css?v=2025090901">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 </head>
 <body>
+    <!-- Loading Animation -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader">
+            <div class="loader-chart">
+                <i class="fas fa-chart-line"></i>
+            </div>
+            <div class="loader-text">Loading Portfolio...</div>
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-logo">
-                <a href="#home">Le'lah Mckoy</a>
+                <a href="#home" aria-label="Go to home section">Le'lah Mckoy</a>
             </div>
-            <div class="nav-menu" id="nav-menu">
-                <a href="#home" class="nav-link">Home</a>
-                <a href="#recommendation" class="nav-link">Recommendation</a>
-                <a href="#about" class="nav-link">About</a>
-                <a href="#experience" class="nav-link">Experience</a>
-                <a href="#skills" class="nav-link">Skills</a>
-                <a href="#projects" class="nav-link">Projects</a>
-                <a href="#contact" class="nav-link">Contact</a>
+            <div class="nav-menu" id="nav-menu" role="menubar">
+                <a href="#home" class="nav-link" role="menuitem" aria-label="Navigate to home section">Home</a>
+                <a href="#recommendation" class="nav-link" role="menuitem" aria-label="Navigate to recommendation section">Recommendation</a>
+                <a href="#about" class="nav-link" role="menuitem" aria-label="Navigate to about section">About</a>
+                <a href="#experience" class="nav-link" role="menuitem" aria-label="Navigate to experience section">Experience</a>
+                <a href="#skills" class="nav-link" role="menuitem" aria-label="Navigate to skills section">Skills</a>
+                <a href="#projects" class="nav-link" role="menuitem" aria-label="Navigate to projects section">Projects</a>
+                <a href="#contact" class="nav-link" role="menuitem" aria-label="Navigate to contact section">Contact</a>
             </div>
-            <div class="nav-toggle" id="nav-toggle">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light mode">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </button>
+                <button class="nav-toggle" id="nav-toggle" aria-label="Toggle mobile menu" aria-expanded="false">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="hero">
+    <section id="home" class="hero" role="banner">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
         <div class="hero-container">
             <div class="hero-content">
-                <div class="hero-text">
-                    <div class="hero-badge">
+                <div class="hero-text" data-aos="fade-up">
+                    <div class="hero-badge" data-aos="fade-up" data-aos-delay="100">
                         <i class="fas fa-chart-line"></i>
-                        <span>Data Analyst</span>
+                        <span>Certified Data Analyst</span>
                     </div>
-                    <h1 class="hero-title">
-                        Hi, I'm <span class="highlight-text">Le'lah Mckoy</span>
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">
+                        Hi, I'm <span class="highlight-text typing-animation">Le'lah Mckoy</span>
                     </h1>
-                    <p class="hero-subtitle">Data Analyst & Business Intelligence Professional</p>
-                    <p class="hero-description">
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">Data Analyst & Business Intelligence Professional</p>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="400">
                         I transform <strong>raw data</strong> into <strong>actionable insights</strong> that drive business decisions. 
-                        Passionate about data visualization, statistical analysis, and telling compelling stories with data.
+                        <strong>Tableau certified</strong> and <strong>AI-enhanced</strong> through prompt engineering, 
+                        I combine technical expertise with creativity to solve complex problems.
                     </p>
-                    <div class="hero-stats">
+                    <div class="hero-certifications" data-aos="fade-up" data-aos-delay="500">
+                        <div class="cert-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>Tableau Certified</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-robot"></i>
+                            <span>Prompt Engineer</span>
+                        </div>
+                    </div>
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="600">
                         <div class="hero-stat">
-                            <div class="stat-number">3+</div>
+                            <div class="stat-number animated-counter" data-target="3">0</div>
                             <div class="stat-label">Years Experience</div>
                         </div>
                         <div class="hero-stat">
-                            <div class="stat-number">8+</div>
+                            <div class="stat-number animated-counter" data-target="8">0</div>
                             <div class="stat-label">Data Projects</div>
                         </div>
                         <div class="hero-stat">
-                            <div class="stat-number">5+</div>
+                            <div class="stat-number animated-counter" data-target="10">0</div>
                             <div class="stat-label">Tools Mastered</div>
                         </div>
+                        <div class="hero-stat">
+                            <div class="stat-number animated-counter" data-target="2">0</div>
+                            <div class="stat-label">Certifications</div>
+                        </div>
                     </div>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn btn-primary">
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="700">
+                        <a href="#projects" class="btn btn-primary glow-effect">
                             <i class="fas fa-chart-bar"></i> 
                             <span>View Data Projects</span>
                         </a>
-                        <a href="#resume" class="btn btn-resume">
+                        <a href="#resume" class="btn btn-resume pulse-effect">
                             <i class="fas fa-download"></i> 
                             <span>Download Resume</span>
                         </a>
-                        <a href="#contact" class="btn btn-secondary">
+                        <a href="#contact" class="btn btn-secondary hover-slide">
                             <span>Get In Touch</span>
                             <i class="fas fa-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div class="hero-visual">
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="400">
                     <div class="profile-container">
-                        <div class="profile-card">
+                        <div class="profile-card floating-element">
                             <div class="profile-img-wrapper">
-                                <img src="assets/images/1E4A9926-Edit.jpg" alt="Le'lah Mckoy Profile Photo" class="profile-img">
-                                <div class="profile-overlay">
-                                    <div class="profile-badge">
-                                        <i class="fas fa-award"></i>
-                                        <span>Recommended by VP</span>
-                                    </div>
-                                </div>
+                                <img src="assets/images/1E4A9926-Edit.jpg" alt="Le'lah Mckoy - Professional headshot of a data analyst" class="profile-img">
                             </div>
                             <div class="profile-info">
                                 <h3>Le'lah Mckoy</h3>
                                 <p>Business IT Student</p>
                                 <p>NC A&T State University</p>
+                                <div class="profile-status">
+                                    <div class="status-dot"></div>
+                                    <span>Available for opportunities</span>
+                                </div>
                             </div>
                         </div>
                         <div class="floating-elements">
-                            <div class="floating-card floating-card-1">
-                                <i class="fab fa-python"></i>
+                            <div class="floating-card floating-card-1" data-aos="zoom-in" data-aos-delay="800">
                                 <span>Python</span>
                             </div>
-                            <div class="floating-card floating-card-2">
-                                <i class="fas fa-chart-pie"></i>
+                            <div class="floating-card floating-card-2" data-aos="zoom-in" data-aos-delay="900">
                                 <span>Tableau</span>
                             </div>
-                            <div class="floating-card floating-card-3">
-                                <i class="fas fa-database"></i>
+                            <div class="floating-card floating-card-3" data-aos="zoom-in" data-aos-delay="1000">
                                 <span>SQL</span>
+                            </div>
+                            <div class="floating-card floating-card-4" data-aos="zoom-in" data-aos-delay="1100">
+                                <span>Prompt Engineering</span>
                             </div>
                         </div>
                     </div>
@@ -117,28 +160,128 @@
     </section>
 
     <!-- Recommendation Section -->
-    <section id="recommendation" class="recommendation">
+    <section id="recommendation" class="recommendation" data-aos="fade-up">
         <div class="container">
-            <div class="recommendation-card">
-                <div class="quote-icon">
-                    <i class="fas fa-quote-left"></i>
-                </div>
-                <blockquote class="recommendation-text">
-                    "Smart, curious, eager—among Lelah's many virtues, her colleagues will notice these first. I hired Lelah for our 2024-2025 federated identity management internship program. She worked hard to master the program's challenging background material. I'm particularly impressed with her ability to learn new techniques and technologies hands-on. And her positive energy is so infectious! As a team member or a leader, Lelah earns my highest recommendation."
-                </blockquote>
-                <div class="recommender-info">
-                    <div class="recommender-details">
-                        <h4>Matthew E.</h4>
-                        <p>VP of Engineering at RDCT</p>
-                        <div class="recommendation-date">
-                            <i class="fas fa-calendar"></i>
-                            <span>June 21, 2025</span>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">Professional Recommendations</h2>
+                <p class="section-subtitle">What industry leaders say about my work</p>
+            </div>
+            
+            <div class="testimonial-slider" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-container">
+                    <div class="testimonial-slide active">
+                        <div class="recommendation-card">
+                            <div class="recommender-photo">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-user-tie"></i>
+                                </div>
+                                <div class="linkedin-verified">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                            </div>
+                            <div class="quote-content">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <blockquote class="recommendation-text">
+                                    "Smart, curious, eager—among Lelah's many virtues, her colleagues will notice these first. I hired Lelah for our 2024-2025 federated identity management internship program. She worked hard to master the program's challenging background material. I'm particularly impressed with her ability to learn new techniques and technologies hands-on. And her positive energy is so infectious! As a team member or a leader, Lelah earns my highest recommendation."
+                                </blockquote>
+                                <div class="recommender-info">
+                                    <div class="recommender-details">
+                                        <h4>Matthew E.</h4>
+                                        <p>VP of Engineering at RDCT</p>
+                                        <div class="recommendation-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>June 21, 2025</span>
+                                        </div>
+                                        <div class="recommendation-skills">
+                                            <span class="skill-tag">Python</span>
+                                            <span class="skill-tag">Leadership</span>
+                                            <span class="skill-tag">Problem Solving</span>
+                                        </div>
+                                    </div>
+                                    <div class="linkedin-badge">
+                                        <i class="fab fa-linkedin"></i>
+                                        <span>LinkedIn Recommendation</span>
+                                        <div class="credibility-score">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="linkedin-badge">
-                        <i class="fab fa-linkedin"></i>
-                        <span>LinkedIn Recommendation</span>
+                    
+                    <!-- Additional testimonial placeholders for future recommendations -->
+                    <div class="testimonial-slide">
+                        <div class="recommendation-card">
+                            <div class="recommender-photo">
+                                <div class="photo-placeholder">
+                                    <i class="fas fa-chalkboard-teacher"></i>
+                                </div>
+                                <div class="linkedin-verified">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                            </div>
+                            <div class="quote-content">
+                                <div class="quote-icon">
+                                    <i class="fas fa-quote-left"></i>
+                                </div>
+                                <blockquote class="recommendation-text">
+                                    "Lelah is an intelligent and curious person who consistently brings enthusiasm and thoughtfulness to every interaction!"
+                                </blockquote>
+                                <div class="recommender-info">
+                                    <div class="recommender-details">
+                                        <h4>Stephanie Kelly</h4>
+                                        <p>Professor, Department of Business Information Systems and Analytics</p>
+                                        <p>North Carolina Agricultural and Technical State University</p>
+                                        <div class="recommendation-date">
+                                            <i class="fas fa-calendar"></i>
+                                            <span>May 20, 2025</span>
+                                        </div>
+                                        <div class="recommendation-skills">
+                                            <span class="skill-tag">Intelligence</span>
+                                            <span class="skill-tag">Curiosity</span>
+                                            <span class="skill-tag">Enthusiasm</span>
+                                        </div>
+                                    </div>
+                                    <div class="linkedin-badge">
+                                        <i class="fab fa-linkedin"></i>
+                                        <span>LinkedIn Recommendation</span>
+                                        <div class="credibility-score">
+                                            <div class="stars">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                </div>
+                
+                <div class="testimonial-nav">
+                    <button class="nav-dot active" data-slide="0" aria-label="Go to first testimonial"></button>
+                    <button class="nav-dot" data-slide="1" aria-label="Go to second testimonial"></button>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn" aria-label="Previous testimonial">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="slider-btn next-btn" aria-label="Next testimonial">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -159,7 +302,7 @@
                             <i class="fas fa-user-graduate"></i>
                         </div>
                         <h3>My Journey</h3>
-                        <p>As a Business IT student at North Carolina A&T State University graduating in December 2025, I've developed a strong passion for transforming raw data into actionable business insights. My internship experience at RDCT under VP of Engineering Matthew E. has strengthened my technical skills and collaborative approach to problem-solving.</p>
+                        <p>As a Business IT student at North Carolina A&T State University graduating in December 2025, I've developed a strong passion for transforming raw data into actionable business insights. With specialized coursework in finance and accounting, I bring a unique analytical perspective to data analysis. My software engineering internship experience at RDCT under VP of Engineering Matthew E. has strengthened my technical skills and collaborative approach to problem-solving.</p>
                     </div>
                     
                     <div class="expertise-grid">
@@ -177,6 +320,14 @@
                             </div>
                             <h4>Data Visualization</h4>
                             <p>Creating compelling dashboards and interactive visualizations using Tableau, Matplotlib, and modern tools</p>
+                        </div>
+                        
+                        <div class="expertise-card">
+                            <div class="expertise-icon">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <h4>Financial Analysis</h4>
+                            <p>Strong foundation in finance and accounting principles with coursework in financial modeling, budgeting, and economic analysis</p>
                         </div>
                         
                         <div class="expertise-card">
@@ -229,6 +380,7 @@
                             <div class="education-details">
                                 <h4>Bachelor of Science</h4>
                                 <p>Business Information Technology</p>
+                                <p>Finance & Accounting Coursework Specialty</p>
                                 <p class="education-school">North Carolina A&T State University</p>
                                 <p class="education-date">Expected: December 2025</p>
                             </div>
@@ -283,24 +435,6 @@
                     </div>
                 </div>
                 
-                <div class="experience-item">
-                    <div class="experience-header">
-                        <h3>Business Information Technology Student</h3>
-                        <div class="company-location">
-                            <h4>North Carolina A&T State University</h4>
-                            <span class="location">Greensboro, NC</span>
-                        </div>
-                        <span class="duration">2022 - December 2025</span>
-                    </div>
-                    <div class="experience-description">
-                        <ul>
-                            <li>Pursuing Bachelor's degree in Business Information Technology with focus on software development and business systems</li>
-                            <li>Completed coursework in data structures, algorithms, software engineering, and business analytics</li>
-                            <li>Developed multiple projects including web applications and data visualization tools</li>
-                            <li>Active participant in programming and technology-related extracurricular activities</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -321,7 +455,7 @@
                         <span class="skill-item expert">NumPy</span>
                         <span class="skill-item intermediate">SQL</span>
                         <span class="skill-item expert">Excel</span>
-                        <span class="skill-item intermediate">R</span>
+                       
                     </div>
                 </div>
                 <div class="skill-category">
@@ -334,8 +468,6 @@
                         <span class="skill-item expert">Matplotlib</span>
                         <span class="skill-item intermediate">Seaborn</span>
                         <span class="skill-item expert">Plotly</span>
-                        <span class="skill-item intermediate">Power BI</span>
-                        <span class="skill-item expert">Chart.js</span>
                     </div>
                 </div>
                 <div class="skill-category">
@@ -348,22 +480,21 @@
                         <span class="skill-item expert">Jupyter</span>
                         <span class="skill-item expert">Git/GitHub</span>
                         <span class="skill-item expert">VS Code</span>
-                        <span class="skill-item intermediate">MongoDB</span>
                         <span class="skill-item expert">Google Analytics</span>
                     </div>
                 </div>
                 <div class="skill-category">
                     <div class="skill-icon">
-                        <i class="fas fa-brain"></i>
+                        <i class="fas fa-calculator"></i>
                     </div>
-                    <h3>Business Skills</h3>
+                    <h3>Finance & Business</h3>
                     <div class="skill-items">
-                        <span class="skill-item expert">Statistical Analysis</span>
+                        <span class="skill-item expert">Financial Analysis</span>
+                        <span class="skill-item intermediate">Accounting Principles</span>
                         <span class="skill-item expert">Business Intelligence</span>
+                        <span class="skill-item expert">Statistical Analysis</span>
                         <span class="skill-item expert">Data Storytelling</span>
                         <span class="skill-item expert">Problem Solving</span>
-                        <span class="skill-item expert">Project Management</span>
-                        <span class="skill-item expert">Presentation</span>
                     </div>
                 </div>
             </div>
@@ -481,13 +612,7 @@
                 </div>
             </div>
             
-            <div class="projects-cta">
-                <p>Interested in seeing more of my work?</p>
-                <a href="#contact" class="btn btn-outline-large">
-                    <span>Let's Discuss Your Data Needs</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
+        
         </div>
     </section>
 
@@ -537,16 +662,69 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p>&copy; 2025 Le'lah Mckoy. All rights reserved.</p>
-                <div class="social-links">
-                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>Le'lah Mckoy</h3>
+                        <p>Data Analyst & Business Intelligence Professional</p>
+                    </div>
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#experience">Experience</a></li>
+                                <li><a href="#skills">Skills</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-section">
+                            <h4>Contact</h4>
+                            <ul>
+                                <li><a href="mailto:Lelahnikohl@gmail.com">Lelahnikohl@gmail.com</a></li>
+                                <li><a href="#contact">Get In Touch</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Le'lah Mckoy. All rights reserved. Built with passion for data.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/lelahmckoy" class="social-link" aria-label="LinkedIn profile" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="social-tooltip">LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/lelahmckoy" class="social-link" aria-label="GitHub profile" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span class="social-tooltip">GitHub</span>
+                        </a>
+                        <a href="mailto:Lelahnikohl@gmail.com" class="social-link" aria-label="Email contact">
+                            <i class="fas fa-envelope"></i>
+                            <span class="social-tooltip">Email</span>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter profile" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">Twitter</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
 
-    <script src="script.js?v=2025072802"></script>
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Success Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <span class="notification-text">Message sent successfully!</span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="script.js?v=2025090901"></script>
 </body>
 </html>
