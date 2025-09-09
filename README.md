@@ -1,141 +1,114 @@
-# Le'lah McKoy - Portfolio Website
+# Le'lah Mckoy - Data Analyst Portfolio
 
-A modern, responsive portfolio website showcasing my skills as a Full Stack Developer and Data Analyst.
+A modern, professional portfolio website designed specifically for data analyst job applications. This portfolio showcases technical skills, professional experience, and includes a prominent recommendation from Matthew E., VP of Engineering at RDCT.
 
-## 🚀 Features
+## 🎯 Purpose
+This portfolio is optimized to help land a data analyst position by highlighting:
+- Data analysis and visualization skills
+- Business intelligence expertise  
+- Professional recommendations
+- Technical proficiency in data tools
+- Clean, modern design that's easy to navigate
 
-- **Responsive Design** - Works perfectly on all devices
-- **Modern UI/UX** - Clean, professional design with smooth animations
-- **Interactive Elements** - Engaging hover effects and scroll animations
-- **Contact Form** - Functional contact form for potential clients/employers
-- **Project Showcase** - Highlighting key projects and technical skills
-- **Fast Loading** - Optimized for performance
+## ✨ Key Features
 
-## 🛠️ Technologies Used
+### Professional Recommendation
+- **Prominent placement** of Matthew E.'s LinkedIn recommendation
+- Highlights key qualities: "Smart, curious, eager"
+- Shows leadership endorsement from VP of Engineering
 
-- **HTML5** - Semantic markup and structure
-- **CSS3** - Modern styling with Flexbox and Grid
-- **JavaScript** - Interactive functionality and animations
+### Data Analyst Focus
+- **Specialized content** for data analyst roles
+- Technical skills organized by category (Data Analysis, Visualization, Database, Business Skills)
+- **Skill level indicators** (Expert, Intermediate, Beginner)
+- Data visualization project showcases
+
+### Modern Design & UX
+- **Responsive design** works on all devices
+- **Interactive animations** and hover effects
+- **Professional color scheme** with data-themed gradients
+- **Smooth scrolling** navigation
+- **Modern typography** with Inter font
+
+### Technical Features
+- **Resume download button** with analytics tracking
+- **Contact form** with validation
+- **Notification system** for user feedback
+- **Performance optimized** with lazy loading animations
+- **SEO-friendly** structure
+
+## 🛠️ Technical Skills Highlighted
+
+### Data Analysis
+- Python, Pandas, NumPy, SQL, Excel, R
+
+### Data Visualization  
+- Tableau, Matplotlib, Seaborn, Plotly, Power BI, Chart.js
+
+### Database & Tools
+- MySQL, Jupyter, Git/GitHub, VS Code, MongoDB, Google Analytics
+
+### Business Skills
+- Statistical Analysis, Business Intelligence, Data Storytelling, Problem Solving
+
+## 📱 Responsive Design
+- **Mobile-first** approach
+- Optimized for desktop, tablet, and mobile
+- **Touch-friendly** navigation and interactions
+
+## � Getting Started
+
+### Local Development
+1. Clone this repository
+2. Navigate to the project directory
+3. Start a local server:
+   ```bash
+   python3 -m http.server 8000
+   ```
+4. Open http://localhost:8000 in your browser
+
+### Customization
+1. **Add your resume**: Replace `/assets/LelahMckoy_DataAnalyst_Resume.pdf` with your actual PDF resume
+2. **Update contact info**: Modify email and social links in the HTML
+3. **Add projects**: Update the projects section with your data analysis projects
+4. **Customize colors**: Modify CSS variables in `styles.css`
+
+## 📄 Resume Integration
+The resume download button is pre-configured. To enable it:
+1. Create a PDF of your resume highlighting data analyst skills
+2. Name it `LelahMckoy_DataAnalyst_Resume.pdf` (or update the path in `script.js`)
+3. Place it in the `/assets/` folder
+4. The download will work automatically
+
+## 🎨 Design Highlights
+- **Hero section** with clear data analyst positioning
+- **Recommendation card** with professional styling and LinkedIn branding  
+- **Skills section** with visual icons and proficiency levels
+- **Project showcase** with data visualization focus
+- **Interactive elements** that demonstrate technical attention to detail
+
+## 📊 Analytics Ready
+- Google Analytics integration ready (just add your tracking ID)
+- Event tracking for resume downloads and form submissions
+- Performance monitoring built-in
+
+## � Technologies Used
+- **HTML5** - Semantic structure
+- **CSS3** - Modern styling with flexbox/grid, custom properties, animations
+- **JavaScript** - Interactive features, form validation, animations
 - **Font Awesome** - Professional icons
-- **Google Fonts** - Beautiful typography (Inter font family)
+- **Google Fonts** - Inter typeface for readability
 
-## 📁 Project Structure
-
-```
-portfolio/
-├── index.html          # Main HTML file
-├── styles.css          # CSS styles and animations
-├── script.js           # JavaScript functionality
-├── README.md           # Project documentation
-└── assets/            # Images and other assets (to be added)
-```
-
-## 🎨 Design Features
-
-- **Hero Section** - Eye-catching introduction with call-to-action buttons
-- **About Section** - Personal introduction and statistics
-- **Experience Section** - Professional experience including RDCT internship and education
-- **Skills Section** - Technical skills organized by category
-- **Projects Section** - Featured projects with descriptions and links
-- **Contact Section** - Contact information and working contact form
-- **Responsive Navigation** - Mobile-friendly navigation menu
-
-## 🔧 Setup and Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   ```
-
-2. Navigate to the project directory:
-   ```bash
-   cd portfolio
-   ```
-
-3. Open `index.html` in your web browser or serve it using a local server:
-   ```bash
-   # Using Python (if installed)
-   python -m http.server 8000
-   
-   # Using Node.js (if installed)
-   npx serve .
-   ```
-
-4. Visit `http://localhost:8000` in your browser
-
-## 📱 Responsive Breakpoints
-
-- **Desktop**: 1200px and above
-- **Tablet**: 768px to 1199px
-- **Mobile**: Below 768px
-
-## 🌟 Key Sections
-
-### Hero Section
-- Personal introduction
-- Call-to-action buttons
-- Professional title and description
-
-### About Me
-- Personal background
-- Achievement statistics
-- Skills overview
-
-### Professional Experience
-- RDCT Software Development Internship (Fall 2024 - Spring 2025)
-- NC A&T Business Information Technology Education
-- Technical skills and project experience
-
-### Skills & Technologies
-- Frontend technologies
-- Backend technologies
-- Data analysis tools
-- Development tools
-
-### Featured Projects
-- GetTasked - Task Management App
-- Data Analysis Dashboard
-- Portfolio Website
-- (More projects can be added)
-
-### Contact
-- Contact form
-- Social media links
-- Professional contact information
-
-## 🚀 Deployment
-
-This portfolio can be easily deployed to various platforms:
-
-- **GitHub Pages**: Push to a GitHub repository and enable Pages
-- **Netlify**: Drag and drop the folder or connect to GitHub
-- **Vercel**: Connect to GitHub repository for automatic deployments
-- **Firebase Hosting**: Use Firebase CLI to deploy
-
-## 📈 Performance Optimizations
-
-- Optimized images and assets
-- Minified CSS and JavaScript (for production)
-- Efficient animations and transitions
-- Fast loading fonts and icons
-- Mobile-first responsive design
-
-## 🔄 Future Enhancements
-
-- [ ] Add dark/light theme toggle
-- [ ] Include blog section
-- [ ] Add more interactive animations
-- [ ] Implement backend for contact form
-- [ ] Add project filtering functionality
-- [ ] Include testimonials section
-
-## 📞 Contact
-
-**Le'lah McKoy**
-- Email: lelahmckoy@example.com
-- LinkedIn: [linkedin.com/in/lelahmckoy](https://linkedin.com/in/lelahmckoy)
-- GitHub: [github.com/lelahmckoy](https://github.com/lelahmckoy)
+## 📈 Optimized for Data Analyst Jobs
+This portfolio specifically targets data analyst positions by:
+- Using data-focused language and terminology
+- Highlighting quantitative achievements  
+- Showcasing data visualization projects prominently
+- Including business intelligence and statistical analysis experience
+- Demonstrating both technical and communication skills
 
 ---
 
-⭐ If you like this portfolio, please give it a star on GitHub!
+**Contact**: Lelahnikohl@gmail.com  
+**LinkedIn**: linkedin.com/in/lelahmckoy  
+**GitHub**: github.com/lelahmckoy

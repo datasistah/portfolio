@@ -17,10 +17,11 @@
             </div>
             <div class="nav-menu" id="nav-menu">
                 <a href="#home" class="nav-link">Home</a>
+                <a href="#recommendation" class="nav-link">Recommendation</a>
                 <a href="#about" class="nav-link">About</a>
                 <a href="#experience" class="nav-link">Experience</a>
-                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
                 <a href="#contact" class="nav-link">Contact</a>
             </div>
             <div class="nav-toggle" id="nav-toggle">
@@ -33,25 +34,110 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1 class="hero-title">
-                    Hi, I'm Le'lah Mckoy
-                </h1>
-                <p class="hero-subtitle">Full Stack Developer & Data Analyst</p>
-                <p class="hero-description">
-                    I create modern web applications and analyze data to drive meaningful insights. 
-                    Passionate about building user-friendly solutions that make a difference.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge">
+                        <i class="fas fa-chart-line"></i>
+                        <span>Data Analyst</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Hi, I'm <span class="highlight-text">Le'lah Mckoy</span>
+                    </h1>
+                    <p class="hero-subtitle">Data Analyst & Business Intelligence Professional</p>
+                    <p class="hero-description">
+                        I transform <strong>raw data</strong> into <strong>actionable insights</strong> that drive business decisions. 
+                        Passionate about data visualization, statistical analysis, and telling compelling stories with data.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="hero-stat">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-number">8+</div>
+                            <div class="stat-label">Data Projects</div>
+                        </div>
+                        <div class="hero-stat">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Tools Mastered</div>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">
+                            <i class="fas fa-chart-bar"></i> 
+                            <span>View Data Projects</span>
+                        </a>
+                        <a href="#resume" class="btn btn-resume">
+                            <i class="fas fa-download"></i> 
+                            <span>Download Resume</span>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Get In Touch</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="profile-container">
+                        <div class="profile-card">
+                            <div class="profile-img-wrapper">
+                                <img src="assets/images/1E4A9926-Edit.jpg" alt="Le'lah Mckoy Profile Photo" class="profile-img">
+                                <div class="profile-overlay">
+                                    <div class="profile-badge">
+                                        <i class="fas fa-award"></i>
+                                        <span>Recommended by VP</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="profile-info">
+                                <h3>Le'lah Mckoy</h3>
+                                <p>Business IT Student</p>
+                                <p>NC A&T State University</p>
+                            </div>
+                        </div>
+                        <div class="floating-elements">
+                            <div class="floating-card floating-card-1">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="floating-card floating-card-2">
+                                <i class="fas fa-chart-pie"></i>
+                                <span>Tableau</span>
+                            </div>
+                            <div class="floating-card floating-card-3">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image">
-                <div class="profile-card">
-                    <div class="profile-img">
-                        <img src="assets/images/1E4A9926-Edit.jpg" alt="Le'lah Mckoy Profile Photo" class="profile-img">
+        </div>
+    </section>
+
+    <!-- Recommendation Section -->
+    <section id="recommendation" class="recommendation">
+        <div class="container">
+            <div class="recommendation-card">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <blockquote class="recommendation-text">
+                    "Smart, curious, eager—among Lelah's many virtues, her colleagues will notice these first. I hired Lelah for our 2024-2025 federated identity management internship program. She worked hard to master the program's challenging background material. I'm particularly impressed with her ability to learn new techniques and technologies hands-on. And her positive energy is so infectious! As a team member or a leader, Lelah earns my highest recommendation."
+                </blockquote>
+                <div class="recommender-info">
+                    <div class="recommender-details">
+                        <h4>Matthew E.</h4>
+                        <p>VP of Engineering at RDCT</p>
+                        <div class="recommendation-date">
+                            <i class="fas fa-calendar"></i>
+                            <span>June 21, 2025</span>
+                        </div>
+                    </div>
+                    <div class="linkedin-badge">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn Recommendation</span>
                     </div>
                 </div>
             </div>
@@ -60,35 +146,92 @@
 
     <!-- About Section -->
     <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <div class="about-background">
-                        <h3>Background</h3>
-                        <ul class="background-points">
-                            <li>Senior Business IT student at North Carolina A&T State University</li>
-                            <li>Strong passion for data collection, manipulation, and visualization</li>
-                            <li>Hands-on experience with Python and Visual Studio for data-driven solutions</li>
-                            <li>Software Development Intern at RDCT under VP of Software Engineering</li>
-                            <li>Gained exposure to terminal workflows and backend development processes</li>
-                            <li>Applied technical skills to master GitHub Copilot for enhanced development</li>
-                            <li>Currently expanding expertise in software development and data visualization</li>
-                            <li>Focused on full-stack application building and collaborative tech projects</li>
-                        </ul>
+        <div class="about-container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">Transforming data into meaningful insights</p>
+            </div>
+            
+            <div class="about-grid">
+                <div class="about-main">
+                    <div class="about-intro-card">
+                        <div class="card-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <h3>My Journey</h3>
+                        <p>As a Business IT student at North Carolina A&T State University graduating in December 2025, I've developed a strong passion for transforming raw data into actionable business insights. My internship experience at RDCT under VP of Engineering Matthew E. has strengthened my technical skills and collaborative approach to problem-solving.</p>
                     </div>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>5+</h3>
-                            <p>Projects Completed</p>
+                    
+                    <div class="expertise-grid">
+                        <div class="expertise-card">
+                            <div class="expertise-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4>Data Analysis</h4>
+                            <p>Expert in Python, Pandas, SQL, and Excel for comprehensive data manipulation and statistical analysis</p>
                         </div>
-                        <div class="stat">
-                            <h3>3+</h3>
-                            <p>Programming Languages</p>
+                        
+                        <div class="expertise-card">
+                            <div class="expertise-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h4>Data Visualization</h4>
+                            <p>Creating compelling dashboards and interactive visualizations using Tableau, Matplotlib, and modern tools</p>
                         </div>
-                        <div class="stat">
-                            <h3>2+</h3>
-                            <p>Years Learning</p>
+                        
+                        <div class="expertise-card">
+                            <div class="expertise-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Business Intelligence</h4>
+                            <p>Experience in analyzing educational data and creating strategic reports that inform decision-making</p>
+                        </div>
+                        
+                        <div class="expertise-card">
+                            <div class="expertise-icon">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <h4>Communication</h4>
+                            <p>Strong ability to present technical findings to non-technical stakeholders through clear storytelling</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-sidebar">
+                    <div class="stats-card">
+                        <h3>By the Numbers</h3>
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <div class="stat-number">8+</div>
+                                <div class="stat-label">Data Projects</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">5+</div>
+                                <div class="stat-label">Tools Mastered</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">3+</div>
+                                <div class="stat-label">Years Experience</div>
+                            </div>
+                            <div class="stat-item">
+                                <div class="stat-number">100%</div>
+                                <div class="stat-label">Passion for Data</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3>Education</h3>
+                        <div class="education-item">
+                            <div class="education-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="education-details">
+                                <h4>Bachelor of Science</h4>
+                                <p>Business Information Technology</p>
+                                <p class="education-school">North Carolina A&T State University</p>
+                                <p class="education-date">Expected: December 2025</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -165,26 +308,62 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Skills & Technologies</h2>
+            <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category">
-                    <h3>Data & Analytics</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Analysis</h3>
                     <div class="skill-items">
-                        <span class="skill-item">Python</span>
-                        <span class="skill-item">Pandas</span>
-                        <span class="skill-item">NumPy</span>
-                        <span class="skill-item">Jupyter</span>
-                        <span class="skill-item">Data Visualization</span>
+                        <span class="skill-item expert">Python</span>
+                        <span class="skill-item expert">Pandas</span>
+                        <span class="skill-item expert">NumPy</span>
+                        <span class="skill-item intermediate">SQL</span>
+                        <span class="skill-item expert">Excel</span>
+                        <span class="skill-item intermediate">R</span>
                     </div>
                 </div>
                 <div class="skill-category">
-                    <h3>Tools & Other</h3>
+                    <div class="skill-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Data Visualization</h3>
                     <div class="skill-items">
-                        <span class="skill-item">Git</span>
-                        <span class="skill-item">VS Code</span>
-                        <span class="skill-item">GitHub</span>
-                        <span class="skill-item">Vercel</span>
-                        <span class="skill-item">Terminal</span>
+                        <span class="skill-item expert">Tableau</span>
+                        <span class="skill-item expert">Matplotlib</span>
+                        <span class="skill-item intermediate">Seaborn</span>
+                        <span class="skill-item expert">Plotly</span>
+                        <span class="skill-item intermediate">Power BI</span>
+                        <span class="skill-item expert">Chart.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Database & Tools</h3>
+                    <div class="skill-items">
+                        <span class="skill-item intermediate">MySQL</span>
+                        <span class="skill-item expert">Jupyter</span>
+                        <span class="skill-item expert">Git/GitHub</span>
+                        <span class="skill-item expert">VS Code</span>
+                        <span class="skill-item intermediate">MongoDB</span>
+                        <span class="skill-item expert">Google Analytics</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Business Skills</h3>
+                    <div class="skill-items">
+                        <span class="skill-item expert">Statistical Analysis</span>
+                        <span class="skill-item expert">Business Intelligence</span>
+                        <span class="skill-item expert">Data Storytelling</span>
+                        <span class="skill-item expert">Problem Solving</span>
+                        <span class="skill-item expert">Project Management</span>
+                        <span class="skill-item expert">Presentation</span>
                     </div>
                 </div>
             </div>
@@ -193,21 +372,102 @@
 
     <!-- Projects Section -->
     <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Data Projects</h2>
+                <p class="section-subtitle">Real-world applications of data analysis and visualization</p>
+            </div>
+            
             <div class="projects-grid">
+                <!-- Featured Project - Large Card -->
+                <div class="project-card featured-project">
+                    <div class="project-image">
+                        <img src="assets/images/projects/data-viz.png" alt="Data Visualization App Screenshot" class="project-screenshot">
+                        <div class="project-overlay">
+                            <div class="project-badge">Featured</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Data Visualization Dashboard</h3>
+                            <div class="project-category">Data Analysis</div>
+                        </div>
+                        <p>A comprehensive data visualization application developed using Python and modern libraries. This app transforms raw datasets into interactive charts and graphs, enabling users to analyze trends, patterns, and insights with ease. Features dynamic plotting capabilities, statistical analysis, and user-friendly data import functionality.</p>
+                        <div class="project-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-chart-line"></i>
+                                <span>Interactive Visualizations</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-database"></i>
+                                <span>Multi-format Data Import</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-calculator"></i>
+                                <span>Statistical Analysis</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-primary">Python</span>
+                            <span class="tech-primary">Pandas</span>
+                            <span class="tech-secondary">Matplotlib</span>
+                            <span class="tech-secondary">Streamlit</span>
+                            <span class="tech-secondary">NumPy</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://data-visualization-tool-delta.vercel.app" class="btn btn-primary" target="_blank">
+                                <i class="fas fa-external-link-alt"></i> 
+                                <span>View Live Demo</span>
+                            </a>
+                            <a href="#" class="btn btn-outline">
+                                <i class="fab fa-github"></i> 
+                                <span>View Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Regular Projects Grid -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="assets/images/tableau.png" alt="Tableau Case Analysis Dashboard Screenshot" class="project-screenshot">
+                        <div class="project-overlay">
+                            <div class="project-type">Business Intelligence</div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Paper Industry Analysis</h3>
+                        <p>Comprehensive business case analysis of nationwide sales data from 2012-2020 across five paper product categories. Identified market trends and demand factors through advanced Tableau visualizations.</p>
+                        <div class="project-tech">
+                            <span class="tech-primary">Tableau</span>
+                            <span class="tech-secondary">Data Analysis</span>
+                            <span class="tech-secondary">Business Intelligence</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-chart-bar"></i> View Dashboard
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-file-pdf"></i> Case Study
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
                 <div class="project-card">
                     <div class="project-image">
                         <img src="assets/images/projects/projectcard.png" alt="GetTasked App Screenshot" class="project-screenshot">
+                        <div class="project-overlay">
+                            <div class="project-type">Full-Stack</div>
+                        </div>
                     </div>
                     <div class="project-content">
-                        <h3>GetTasked - Task Management App</h3>
-                        <p>A modern task management application built with React and Python Flask. Features include task creation, organization, and progress tracking with beautiful visualizations.</p>
+                        <h3>GetTasked - Analytics Dashboard</h3>
+                        <p>Task management application with integrated analytics dashboard. Features data visualization for productivity tracking, user behavior analysis, and performance metrics.</p>
                         <div class="project-tech">
-                            <span>React</span>
-                            <span>Python</span>
-                            <span>Flask</span>
-                            <span>Chart.js</span>
+                            <span class="tech-primary">React</span>
+                            <span class="tech-primary">Python Flask</span>
+                            <span class="tech-secondary">Chart.js</span>
                         </div>
                         <div class="project-links">
                             <a href="https://gettasked.vercel.app" class="project-link" target="_blank">
@@ -219,79 +479,14 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/projects/data-viz.png" alt="Data Visualization App Screenshot" class="project-screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h3>Data Visualization App</h3>
-                        <p>A comprehensive data visualization application developed using Python and GitHub Copilot. This app transforms raw data into interactive charts and graphs, enabling users to analyze trends and patterns with ease. Features dynamic plotting capabilities and user-friendly data import functionality.</p>
-                        <div class="project-tech">
-                            <span>Python</span>
-                            <span>GitHub Copilot</span>
-                            <span>Matplotlib</span>
-                            <span>Pandas</span>
-                            <span>Streamlit</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://data-visualization-tool-delta.vercel.app" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> View Project
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/projects/portfolio.png" alt="Portfolio Website Screenshot" class="project-screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h3>Portfolio Website</h3>
-                        <p>This responsive portfolio website showcasing my projects and skills. Built with modern HTML5, CSS3, and JavaScript with a focus on clean design and user experience.</p>
-                        <div class="project-tech">
-                            <span>HTML5</span>
-                            <span>CSS3</span>
-                            <span>JavaScript</span>
-                            <span>Responsive Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://lelahmckoy.github.io/portfolio" class="project-link" target="_blank">
-                                <i class="fas fa-external-link-alt"></i> Live Site
-                            </a>
-                            <a href="https://github.com/LelahM/portfolio" class="project-link" target="_blank">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="assets/images/tableau.png" alt="Tableau Case Analysis Dashboard Screenshot" class="project-screenshot">
-                    </div>
-                    <div class="project-content">
-                        <h3>Case Analysis Project</h3>
-                        <p>Analyzed nationwide sales data from 2012 to 2020 across five paper product categories: cardboard, coated paper, newsprint, paperboard, and tissue paper. Identified sales trends, market shifts, and factors impacting demand to provide insights into industry performance over time. This comprehensive business case analysis utilizes Tableau for advanced data visualization and demonstrates complex data storytelling through interactive dashboards.</p>
-                        <div class="project-tech">
-                            <span>Tableau</span>
-                            <span>Data Analysis</span>
-                            <span>Business Intelligence</span>
-                            <span>Data Storytelling</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> View Dashboard
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-pdf"></i> Case Study
-                            </a>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="projects-cta">
+                <p>Interested in seeing more of my work?</p>
+                <a href="#contact" class="btn btn-outline-large">
+                    <span>Let's Discuss Your Data Needs</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
             </div>
         </div>
     </section>

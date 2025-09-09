@@ -28,6 +28,101 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Resume Download Functionality
+document.addEventListener('DOMContentLoaded', () => {
+    const resumeBtn = document.querySelector('.btn-resume');
+    if (resumeBtn) {
+        resumeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            
+            try {
+                // Create a temporary link for download
+                const link = document.createElement('a');
+                link.href = '/assets/LelahMckoy_DataAnalyst_Resume.pdf';
+                link.download = 'LelahMckoy_DataAnalyst_Resume.pdf';
+                link.target = '_blank';
+                
+                // Append to body, click, and remove
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                
+                // Show success notification
+                showNotification('Resume download started! (Note: Replace placeholder with actual PDF)', 'success');
+                
+                // Analytics tracking (if you have Google Analytics)
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'resume_download', {
+                        'event_category': 'engagement',
+                        'event_label': 'Resume PDF'
+                    });
+                }
+                
+            } catch (error) {
+                console.error('Resume download error:', error);
+                showNotification('Resume temporarily unavailable. Please contact directly for resume.', 'error');
+            }
+        });
+    }
+});
+
+// Notification System
+function showNotification(message, type = 'info') {
+    // Remove existing notifications
+    const existingNotifications = document.querySelectorAll('.notification');
+    existingNotifications.forEach(notif => notif.remove());
+    
+    const notification = document.createElement('div');
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+        <div class="notification-content">
+            <i class="fas ${type === 'success' ? 'fa-check-circle' : type === 'error' ? 'fa-exclamation-triangle' : 'fa-info-circle'}"></i>
+            <span>${message}</span>
+            <button class="notification-close">&times;</button>
+        </div>
+    `;
+    
+    // Add to body
+    document.body.appendChild(notification);
+    
+    // Style the notification
+    Object.assign(notification.style, {
+        position: 'fixed',
+        top: '20px',
+        right: '20px',
+        zIndex: '10000',
+        background: type === 'success' ? '#10B981' : type === 'error' ? '#EF4444' : '#8B5CF6',
+        color: 'white',
+        padding: '1rem',
+        borderRadius: '12px',
+        boxShadow: '0 10px 25px rgba(0, 0, 0, 0.2)',
+        transform: 'translateX(100%)',
+        transition: 'transform 0.3s ease',
+        maxWidth: '400px',
+        backdropFilter: 'blur(10px)'
+    });
+    
+    // Animate in
+    setTimeout(() => {
+        notification.style.transform = 'translateX(0)';
+    }, 100);
+    
+    // Close functionality
+    const closeBtn = notification.querySelector('.notification-close');
+    closeBtn.addEventListener('click', () => {
+        notification.style.transform = 'translateX(100%)';
+        setTimeout(() => notification.remove(), 300);
+    });
+    
+    // Auto remove after 5 seconds
+    setTimeout(() => {
+        if (notification.parentNode) {
+            notification.style.transform = 'translateX(100%)';
+            setTimeout(() => notification.remove(), 300);
+        }
+    }, 5000);
+}
+
 // Navbar background on scroll
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
@@ -40,31 +135,56 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Contact form handling
+// Enhanced Contact Form with Data Analytics Focus
 const contactForm = document.getElementById('contact-form');
-contactForm.addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const message = formData.get('message');
-    
-    // Simple validation
-    if (!name || !email || !message) {
-        alert('Please fill in all fields');
-        return;
-    }
-    
-    // Show success message (in a real app, you'd send this to a server)
-    alert('Thank you for your message! I\'ll get back to you soon.');
-    
-    // Reset form
-    this.reset();
-});
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Get form data
+        const formData = new FormData(this);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const message = formData.get('message');
+        
+        // Enhanced validation
+        if (!name || !email || !message) {
+            showNotification('Please fill in all fields', 'error');
+            return;
+        }
+        
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            showNotification('Please enter a valid email address', 'error');
+            return;
+        }
+        
+        // Show loading state
+        const submitBtn = this.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+        
+        // Simulate form submission (replace with actual endpoint)
+        setTimeout(() => {
+            showNotification('Thank you for your message! I\'ll get back to you within 24 hours.', 'success');
+            this.reset();
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            
+            // Analytics tracking
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'contact_form_submit', {
+                    'event_category': 'engagement',
+                    'event_label': 'Contact Form'
+                });
+            }
+        }, 1500);
+    });
+}
 
-// Animate elements on scroll
+// Enhanced scroll animations for data analyst portfolio
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -75,20 +195,166 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.style.opacity = '1';
             entry.target.style.transform = 'translateY(0)';
+            
+            // Add specific animations for different elements
+            if (entry.target.classList.contains('skill-category')) {
+                entry.target.style.animationDelay = `${Math.random() * 0.5}s`;
+                entry.target.classList.add('animate-in');
+            }
+            
+            if (entry.target.classList.contains('recommendation-card')) {
+                entry.target.classList.add('animate-recommendation');
+            }
         }
     });
 }, observerOptions);
 
-// Observe elements for animation
+// Skill level animation
+function animateSkillLevels() {
+    const skillItems = document.querySelectorAll('.skill-item');
+    skillItems.forEach((skill, index) => {
+        setTimeout(() => {
+            skill.style.transform = 'scale(1)';
+            skill.style.opacity = '1';
+        }, index * 100);
+    });
+}
+
+// Data visualization demo (for projects)
+function createDataVizDemo() {
+    const projectCards = document.querySelectorAll('.project-card');
+    projectCards.forEach((card, index) => {
+        card.addEventListener('mouseenter', () => {
+            // Add subtle data visualization effect
+            const overlay = document.createElement('div');
+            overlay.className = 'data-overlay';
+            overlay.innerHTML = `
+                <div class="data-points">
+                    <div class="data-point" style="--delay: 0s"></div>
+                    <div class="data-point" style="--delay: 0.2s"></div>
+                    <div class="data-point" style="--delay: 0.4s"></div>
+                    <div class="data-point" style="--delay: 0.6s"></div>
+                </div>
+            `;
+            
+            // Add styles for the overlay
+            Object.assign(overlay.style, {
+                position: 'absolute',
+                top: '0',
+                left: '0',
+                right: '0',
+                bottom: '0',
+                background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(16, 185, 129, 0.1))',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                opacity: '0',
+                transition: 'opacity 0.3s ease',
+                pointerEvents: 'none'
+            });
+            
+            card.style.position = 'relative';
+            card.appendChild(overlay);
+            
+            setTimeout(() => {
+                overlay.style.opacity = '1';
+            }, 50);
+        });
+        
+        card.addEventListener('mouseleave', () => {
+            const overlay = card.querySelector('.data-overlay');
+            if (overlay) {
+                overlay.style.opacity = '0';
+                setTimeout(() => overlay.remove(), 300);
+            }
+        });
+    });
+}
+
+// Initialize data analyst specific features
 document.addEventListener('DOMContentLoaded', () => {
-    const animateElements = document.querySelectorAll('.project-card, .skill-category, .about-text');
+    // Animate elements on scroll
+    const animateElements = document.querySelectorAll(
+        '.project-card, .skill-category, .about-text, .recommendation-card, .experience-item'
+    );
     
     animateElements.forEach(el => {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
         observer.observe(el);
     });
+    
+    // Initialize skill level animations
+    const skillsSection = document.querySelector('.skills');
+    if (skillsSection) {
+        const skillsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillLevels();
+                    skillsObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+        
+        skillsObserver.observe(skillsSection);
+    }
+    
+    // Initialize data visualization demos
+    createDataVizDemo();
+    
+    // Add CSS for data points animation
+    const style = document.createElement('style');
+    style.textContent = `
+        .data-point {
+            width: 10px;
+            height: 10px;
+            background: #10B981;
+            border-radius: 50%;
+            margin: 5px;
+            opacity: 0;
+            transform: scale(0);
+            animation: dataPointPulse 1s ease-out infinite var(--delay);
+        }
+        
+        @keyframes dataPointPulse {
+            0% { opacity: 0; transform: scale(0); }
+            50% { opacity: 1; transform: scale(1.5); }
+            100% { opacity: 0; transform: scale(0); }
+        }
+        
+        .data-points {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .animate-recommendation {
+            animation: recommendationFloat 3s ease-in-out infinite;
+        }
+        
+        @keyframes recommendationFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .skill-category.animate-in {
+            animation: skillCategorySlide 0.8s ease-out;
+        }
+        
+        @keyframes skillCategorySlide {
+            from {
+                opacity: 0;
+                transform: translateX(-50px) rotateY(-15deg);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) rotateY(0);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+});
     
     // Background points sequential animation
     const backgroundPoints = document.querySelectorAll('.background-points li');
@@ -232,10 +498,20 @@ document.querySelectorAll('.btn').forEach(btn => {
     });
 });
 
-// Console welcome message
+// Console welcome message for data analysts and recruiters
 console.log(`
-🎉 Welcome to Le'lah McKoy's Portfolio!
-📧 Contact: lelahmckoy@example.com
-💼 Portfolio: Built with HTML, CSS, and JavaScript
-🚀 Feel free to explore the code!
+📊 Welcome to Le'lah McKoy's Data Analyst Portfolio!
+📧 Contact: Lelahnikohl@gmail.com
+💼 Focus: Data Analysis | Business Intelligence | Data Visualization
+🛠️ Built with: HTML5, CSS3, JavaScript + Modern UI/UX
+📈 Recommendation: "Smart, curious, eager" - Matthew E., VP of Engineering
+🚀 Ready to turn data into insights!
 `);
+
+// Add performance tracking for portfolio analytics
+if ('performance' in window) {
+    window.addEventListener('load', () => {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+        console.log(`⚡ Portfolio loaded in ${loadTime}ms`);
+    });
+}
